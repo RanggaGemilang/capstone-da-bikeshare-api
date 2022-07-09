@@ -49,8 +49,8 @@ def get_all_trips(conn):
 @app.route('/stations/<station_id>')
 def route_stations_id(station_id):
     conn = make_connection()
-    station = get_station_id(station_id, conn)
-    return station.to_json()
+    stations = get_station_id(station_id, conn)
+    return stations.to_json()
 
 # get_station_id() function
 
@@ -62,8 +62,8 @@ def get_station_id(station_id, conn):
 @app.route('/trips/<trip_id>')
 def route_trips_id(trip_id):
     conn = make_connection()
-    trip = get_trip_id(trip_id, conn)
-    return trip.to_json()
+    trips = get_trip_id(trip_id, conn)
+    return trips.to_json()
 
 # get_trip_id() function
 
